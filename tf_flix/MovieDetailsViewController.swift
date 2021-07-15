@@ -26,22 +26,36 @@ class MovieDetailsViewController: UIViewController {
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseURL + posterPath)!
         posterView.af.setImage(withURL: posterUrl)
+        
         let backdropPath = movie["backdrop_path"] as! String
         let backdropUrl = URL(string: "https://image.tmdb.org/t/p/w780" + backdropPath)!
         backdropView.af.setImage(withURL: backdropUrl)
-        // Do any additional setup after loading the view.
+        
+        // For allowing text to scroll in the synopsis label
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: synopsisLabel.bottomAnchor).isActive = true
+    
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapPoster(_:)))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        posterView.isUserInteractionEnabled = true
+        posterView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-
-    /*
+    @IBAction func didTapPoster(_ sender: UITapGestureRecognizer) {
+        print("tapped")
+        performSegue(withIdentifier: "trailerSegue", sender: nil)
+        
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let movieTrailerViewController = segue.destination as! MovieTrailerViewController
         // Pass the selected object to the new view controller.
+        movieTrailerViewController.movie = movie
     }
-    */
+    
 
 }

@@ -38,7 +38,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 self.movies = dataDictionary["results"] as! [[String:Any]]
                 // tell table view to update after API call results
                 self.tableView.reloadData()
-                print(dataDictionary)
 
             }
         }

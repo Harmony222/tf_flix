@@ -41,7 +41,6 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
                 // Get array of movies and store in property to use elsewhere
                 self.movies = dataDictionary["results"] as! [[String:Any]]
                 // tell table view to update after API call results
-                print(self.movies)
                 self.collectionView.reloadData()
             }
         }
@@ -66,14 +65,24 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        // deselect row so that it is no longer highlighted when we return to screen
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
-    */
+    
 
 }

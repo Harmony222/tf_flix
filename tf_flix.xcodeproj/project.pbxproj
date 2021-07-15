@@ -18,6 +18,7 @@
 		FF55A36C2696124900FCFE87 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A36B2696124900FCFE87 /* MoviesViewController.swift */; };
 		FF55A36F2696185D00FCFE87 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55A36E2696185D00FCFE87 /* MovieCell.swift */; };
 		FF55A37326961D0C00FCFE87 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF55A37226961D0C00FCFE87 /* AlamofireImage */; };
+		FFA867C326A0ED85002FE33E /* MovieTrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA867C226A0ED85002FE33E /* MovieTrailerViewController.swift */; };
 		FFF916D3269F74920067101F /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF916D2269F74920067101F /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		FF55A36326960FEE00FCFE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF55A36B2696124900FCFE87 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		FF55A36E2696185D00FCFE87 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		FFA867C226A0ED85002FE33E /* MovieTrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerViewController.swift; sourceTree = "<group>"; };
 		FFF916D2269F74920067101F /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				FFF916D2269F74920067101F /* MovieDetailsViewController.swift */,
 				FF33D2D0269F7E5A00F746BA /* MovieGridViewController.swift */,
 				FF33D2D3269F849200F746BA /* MovieGridCell.swift */,
+				FFA867C226A0ED85002FE33E /* MovieTrailerViewController.swift */,
 			);
 			path = tf_flix;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				FFF916D3269F74920067101F /* MovieDetailsViewController.swift in Sources */,
 				FF55A35626960FED00FCFE87 /* AppDelegate.swift in Sources */,
+				FFA867C326A0ED85002FE33E /* MovieTrailerViewController.swift in Sources */,
 				FF55A35826960FED00FCFE87 /* SceneDelegate.swift in Sources */,
 				FF55A36F2696185D00FCFE87 /* MovieCell.swift in Sources */,
 				FF55A36C2696124900FCFE87 /* MoviesViewController.swift in Sources */,
